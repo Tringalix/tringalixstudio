@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Neon Social Pack – TringaliXStudio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    :root {
+        --accent: #00ffc8;
+        --accent-soft: #00bfa0;
+        --bg: #050509;
+        --card: #101018;
+        --text: #ffffff;
+        --muted: #aaaaaa;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        background: radial-gradient(circle at top, #111428 0, #050509 45%, #020208 100%);
+        font-family: Arial, sans-serif;
+        color: var(--text);
+        padding: 25px;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 36px;
+        color: var(--accent);
+        text-shadow: 0 0 10px var(--accent);
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .section {
+        background: var(--card);
+        padding: 20px;
+        border-radius: 14px;
+        border: 1px solid rgba(0,255,200,0.3);
+        margin-bottom: 25px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+
+    .title {
+        font-size: 22px;
+        color: var(--accent);
+        margin-bottom: 10px;
+    }
+
+    .preview-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        margin-top: 15px;
+    }
+
+    .preview {
+        background: #050509;
+        border: 1px solid rgba(0,255,200,0.3);
+        border-radius: 12px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 0 12px rgba(0,255,200,0.2);
+    }
+
+    .banner {
+        width: 100%;
+        height: 90px;
+        background: linear-gradient(90deg, #00ffc8, #00bfa0);
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .card-social {
+        width: 100%;
+        height: 120px;
+        background: #101018;
+        border: 2px solid var(--accent);
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 140px;
+        background: #050509;
+        border: 2px dashed var(--accent);
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        width: 100%;
+        height: 80px;
+        background: #101018;
+        border-radius: 10px;
+        border: 2px solid var(--accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: var(--accent);
+        text-shadow: 0 0 10px var(--accent);
+    }
+
+    .btn {
+        display: block;
+        background: var(--accent);
+        color: #000;
+        padding: 14px;
+        border-radius: 12px;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        margin-top: 20px;
+        transition: 0.2s;
+    }
+
+    .btn:hover {
+        background: var(--accent-soft);
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Neon Social Pack</h1>
+
+    <div class="section">
+        <div class="title">Cosa include il pack</div>
+        <ul style="color:var(--muted); line-height:1.7; font-size:15px;">
+            <li>• 5 banner neon per YouTube / Twitch</li>
+            <li>• 5 card social per Instagram / TikTok</li>
+            <li>• 3 overlay streaming (webcam + info bar)</li>
+            <li>• 3 loghi neon base</li>
+        </ul>
+    </div>
+
+    <!-- ANTEPRIME -->
+    <div class="section">
+        <div class="title">Anteprime grafiche</div>
+
+        <div class="preview-grid">
+
+            <!-- Banner -->
+            <div class="preview">
+                <div class="banner"></div>
+                <div style="color:var(--muted); font-size:14px;">Banner Neon</div>
+            </div>
+
+            <!-- Card Social -->
+            <div class="preview">
+                <div class="card-social"></div>
+                <div style="color:var(--muted); font-size:14px;">Card Social</div>
+            </div>
+
+            <!-- Overlay -->
+            <div class="preview">
+                <div class="overlay"></div>
+                <div style="color:var(--muted); font-size:14px;">Overlay Streaming</div>
+            </div>
+
+            <!-- Logo -->
+            <div class="preview">
+                <div class="logo">LOGO</div>
+                <div style="color:var(--muted); font-size:14px;">Logo Neon</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PREZZO -->
+    <div class="section">
+        <div class="title">Prezzo</div>
+        <p style="color:var(--accent); font-size:20px; font-weight:bold;">10€</p>
+        <p style="color:var(--muted); font-size:14px;">Consegna via email o link diretto.</p>
+        <a class="btn" href="#contatti">Acquista il pack</a>
+    </div>
+
+    <!-- CONTATTI -->
+    <div class="section" id="contatti">
+        <div class="title">Contatti</div>
+        <p style="color:var(--muted); font-size:15px;">
+            Email: <span style="color:var(--accent);">tringalixstudio@esempio.com</span><br>
+            Scrivimi per acquistare o personalizzare il pack.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
