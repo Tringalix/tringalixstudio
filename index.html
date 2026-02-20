@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>TringaliXStudio – Template Neon & Web Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         :root {
             --bg: #050509;
@@ -13,13 +14,40 @@
             --text: #f5f5f5;
             --muted: #aaaaaa;
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             background: radial-gradient(circle at top, #111428 0, #050509 45%, #020208 100%);
             font-family: Arial, sans-serif;
             color: var(--text);
             padding-bottom: 40px;
         }
+
+        /* LOGO NEON */
+        .neon-logo {
+            font-family: Arial, sans-serif;
+            font-size: 42px;
+            font-weight: bold;
+            color: #00ffc8;
+            text-shadow:
+                0 0 5px #00ffc8,
+                0 0 10px #00ffc8,
+                0 0 20px #00ffc8,
+                0 0 40px #00bfa0,
+                0 0 80px #00bfa0;
+            letter-spacing: 2px;
+        }
+
+        .neon-logo span {
+            color: #ffffff;
+            font-weight: normal;
+            text-shadow:
+                0 0 5px #ffffff,
+                0 0 10px #ffffff,
+                0 0 20px #00ffc8;
+        }
+
         header {
             background: rgba(5,5,9,0.9);
             padding: 15px 20px;
@@ -27,21 +55,28 @@
             position: sticky;
             top: 0;
             backdrop-filter: blur(10px);
+            text-align: center;
         }
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: var(--accent);
-            text-shadow: 0 0 8px rgba(0,255,200,0.7);
-        }
+
         main { max-width: 1100px; margin: 0 auto; padding: 20px; }
-        .section-title { font-size: 22px; margin-bottom: 10px; color: var(--accent); }
-        .section-sub { color: var(--muted); margin-bottom: 20px; }
-        .services {
+
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        .section-sub {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .services, .examples {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
         }
+
         .card {
             background: var(--card);
             padding: 18px;
@@ -49,8 +84,10 @@
             border: 1px solid rgba(255,255,255,0.05);
             box-shadow: 0 0 12px rgba(0,0,0,0.7);
         }
+
         .card-title { font-size: 18px; margin-bottom: 6px; }
         .card-text { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+
         .btn {
             display: block;
             text-align: center;
@@ -61,7 +98,9 @@
             font-weight: bold;
             text-decoration: none;
         }
+
         .btn:hover { background: var(--accent-soft); }
+
         footer {
             margin-top: 40px;
             text-align: center;
@@ -79,7 +118,8 @@
 
 <main>
 
-    <h1 class="section-title">Template pronti all'uso</h1>
+    <!-- SERVIZI -->
+    <h2 class="section-title">Template pronti all'uso</h2>
     <p class="section-sub">Clicca su un servizio per aprire il template già pronto.</p>
 
     <div class="services">
@@ -87,14 +127,14 @@
         <!-- GAMING PROFILE -->
         <div class="card">
             <div class="card-title">Gaming Profile</div>
-            <div class="card-text">Profilo gaming neon, avatar, bio, giochi preferiti, social.</div>
+            <div class="card-text">Profilo gaming neon con avatar, bio, giochi preferiti e social.</div>
             <a class="btn" href="gaming-profile.html">Apri Template</a>
         </div>
 
         <!-- LINK IN BIO -->
         <div class="card">
             <div class="card-title">Link‑in‑Bio Dark</div>
-            <div class="card-text">Pagina verticale neon per TikTok, Instagram, Twitch.</div>
+            <div class="card-text">Pagina verticale neon per TikTok, Instagram e Twitch.</div>
             <a class="btn" href="link-in-bio.html">Apri Template</a>
         </div>
 
@@ -106,6 +146,59 @@
         </div>
 
     </div>
+
+    <!-- ESEMPI TEMPLATE -->
+    <section id="esempi" style="margin-top:40px;">
+        <h2 class="section-title">Esempi di Template</h2>
+        <p class="section-sub">Una piccola anteprima dei template disponibili su TringaliXStudio.</p>
+
+        <div class="examples">
+
+            <!-- ESEMPIO 1 -->
+            <div class="card">
+                <div class="card-title" style="color:#00ffc8;">Gaming Profile</div>
+
+                <div style="background:#050509;padding:15px;border-radius:10px;margin-bottom:12px;border:1px solid rgba(0,255,200,0.2);text-align:center;">
+                    <div style="width:60px;height:60px;border-radius:50%;border:2px solid #00ffc8;margin:0 auto 10px;"></div>
+                    <div style="color:#00ffc8;font-weight:bold;">TringaliX</div>
+                    <div style="color:#aaa;font-size:12px;">Gamer · FPS · Neon Style</div>
+                </div>
+
+                <a class="btn" href="gaming-profile.html">Apri Template</a>
+            </div>
+
+            <!-- ESEMPIO 2 -->
+            <div class="card">
+                <div class="card-title" style="color:#00ffc8;">Link‑in‑Bio Dark</div>
+
+                <div style="background:#050509;padding:15px;border-radius:10px;margin-bottom:12px;border:1px solid rgba(0,255,200,0.2);text-align:center;">
+                    <div style="width:60px;height:60px;border-radius:50%;border:2px solid #00ffc8;margin:0 auto 10px;"></div>
+                    <div style="color:#00ffc8;font-weight:bold;">TringaliX</div>
+                    <div style="margin-top:10px;">
+                        <div style="background:#00ffc8;color:#000;padding:6px;border-radius:8px;margin-bottom:6px;font-size:12px;">TikTok</div>
+                        <div style="background:#00ffc8;color:#000;padding:6px;border-radius:8px;margin-bottom:6px;font-size:12px;">Instagram</div>
+                    </div>
+                </div>
+
+                <a class="btn" href="link-in-bio.html">Apri Template</a>
+            </div>
+
+            <!-- ESEMPIO 3 -->
+            <div class="card">
+                <div class="card-title" style="color:#00ffc8;">Portfolio Neon</div>
+
+                <div style="background:#050509;padding:15px;border-radius:10px;margin-bottom:12px;border:1px solid rgba(0,255,200,0.2);">
+                    <div style="color:#00ffc8;font-weight:bold;margin-bottom:6px;">Chi sono</div>
+                    <div style="color:#aaa;font-size:12px;margin-bottom:10px;">Web designer neon</div>
+                    <div style="color:#00ffc8;font-weight:bold;margin-bottom:6px;">Progetti</div>
+                    <div style="color:#aaa;font-size:12px;">Gaming Profile · Link‑in‑Bio</div>
+                </div>
+
+                <a class="btn" href="portfolio-neon.html">Apri Template</a>
+            </div>
+
+        </div>
+    </section>
 
 </main>
 
