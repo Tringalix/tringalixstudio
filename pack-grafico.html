@@ -33,8 +33,15 @@
         font-size: 36px;
         color: var(--accent);
         text-shadow: 0 0 10px var(--accent);
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: var(--muted);
+        margin-bottom: 25px;
+        font-size: 14px;
     }
 
     .section {
@@ -47,9 +54,15 @@
     }
 
     .title {
-        font-size: 22px;
+        font-size: 20px;
         color: var(--accent);
         margin-bottom: 10px;
+    }
+
+    .text {
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.7;
     }
 
     .preview-grid {
@@ -108,6 +121,13 @@
         text-shadow: 0 0 10px var(--accent);
     }
 
+    .price {
+        color: var(--accent);
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
     .btn {
         display: block;
         background: var(--accent);
@@ -117,12 +137,19 @@
         font-weight: bold;
         text-decoration: none;
         text-align: center;
-        margin-top: 20px;
+        margin-top: 15px;
         transition: 0.2s;
     }
 
     .btn:hover {
         background: var(--accent-soft);
+    }
+
+    .note {
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 8px;
+        text-align: center;
     }
 </style>
 </head>
@@ -132,15 +159,22 @@
 <div class="container">
 
     <h1>Neon Social Pack</h1>
+    <div class="subtitle">
+        Pack grafico completo per creator, gamer e streamer.  
+        Banner, card social, overlay e loghi in stile neon.
+    </div>
 
+    <!-- COSA INCLUDE -->
     <div class="section">
         <div class="title">Cosa include il pack</div>
-        <ul style="color:var(--muted); line-height:1.7; font-size:15px;">
-            <li>• 5 banner neon per YouTube / Twitch</li>
-            <li>• 5 card social per Instagram / TikTok</li>
-            <li>• 3 overlay streaming (webcam + info bar)</li>
-            <li>• 3 loghi neon base</li>
-        </ul>
+        <div class="text">
+            <ul style="list-style:none; padding-left:0; margin-top:8px;">
+                <li>• 5 banner neon per YouTube / Twitch</li>
+                <li>• 5 card social per Instagram / TikTok</li>
+                <li>• 3 overlay streaming (webcam + info bar)</li>
+                <li>• 3 loghi neon base</li>
+            </ul>
+        </div>
     </div>
 
     <!-- ANTEPRIME -->
@@ -176,21 +210,31 @@
         </div>
     </div>
 
-    <!-- PREZZO -->
+    <!-- PREZZO E ACQUISTO -->
     <div class="section">
-        <div class="title">Prezzo</div>
-        <p style="color:var(--accent); font-size:20px; font-weight:bold;">10€</p>
-        <p style="color:var(--muted); font-size:14px;">Consegna via email o link diretto.</p>
-        <a class="btn" href="#contatti">Acquista il pack</a>
+        <div class="title">Prezzo & Acquisto</div>
+        <div class="price">10€</div>
+        <div class="text">
+            Pagamento sicuro tramite Revolut.  
+            Dopo il pagamento riceverai il pack via email o link diretto.
+        </div>
+
+        <a class="btn" href="https://checkout.revolut.com/pay/d36e5488-7d94-4afd-8bb0-94307aefc2c2" target="_blank">
+            Acquista ora con Revolut
+        </a>
+
+        <div class="note">
+            Dopo il pagamento, se non ricevi il pack entro poco, contattami via email con la prova di pagamento.
+        </div>
     </div>
 
     <!-- CONTATTI -->
     <div class="section" id="contatti">
         <div class="title">Contatti</div>
-        <p style="color:var(--muted); font-size:15px;">
+        <div class="text">
             Email: <span style="color:var(--accent);">tringalixstudio@esempio.com</span><br>
-            Scrivimi per acquistare o personalizzare il pack.
-        </p>
+            Per supporto, personalizzazioni o problemi con il download.
+        </div>
     </div>
 
 </div>
