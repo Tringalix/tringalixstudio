@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Gaming Profile – TringaliXStudio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --bg: #050509;
+            --card: #101018;
+            --accent: #00ffc8;
+            --accent-soft: #00bfa0;
+            --text: #f5f5f5;
+            --muted: #aaaaaa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: radial-gradient(circle at top, #111428 0, #050509 45%, #020208 100%);
+            font-family: Arial, sans-serif;
+            color: var(--text);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* CARD PROFILO */
+        .profile {
+            max-width: 420px;
+            margin: 0 auto;
+            background: var(--card);
+            border-radius: 18px;
+            padding: 20px;
+            border: 1px solid rgba(0, 255, 200, 0.3);
+            box-shadow: 0 0 18px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            margin-bottom: 12px;
+            object-fit: cover;
+        }
+
+        .nickname {
+            font-size: 26px;
+            font-weight: bold;
+            color: var(--accent);
+            text-shadow: 0 0 10px rgba(0, 255, 200, 0.7);
+            margin-bottom: 6px;
+        }
+
+        .bio {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        /* SOCIAL */
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .social a {
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(0, 255, 200, 0.1);
+            border: 1px solid rgba(0, 255, 200, 0.4);
+            color: var(--accent);
+            font-size: 13px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .social a:hover {
+            background: rgba(0, 255, 200, 0.2);
+        }
+
+        /* GIOCHI PREFERITI */
+        .section-title {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: left;
+            color: var(--accent);
+        }
+
+        .games {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .games li {
+            margin-bottom: 6px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* BOTTONI FINALI */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            background: var(--accent);
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 10px;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--accent-soft);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="profile">
+
+    <img class="avatar" src="https://i.imgur.com/4ZQZ4ZC.png" alt="Avatar">
+
+    <div class="nickname">TringaliX</div>
+
+    <div class="bio">
+        Gamer · Creator · Neon Style  
+        Amante dei giochi di corse, FPS e arcade.
+    </div>
+
+    <div class="social">
+        <a href="#">Discord</a>
+        <a href="#">YouTube</a>
+        <a href="#">Twitch</a>
+    </div>
+
+    <div class="section-title">🎮 Giochi Preferiti</div>
+    <ul class="games">
+        <li>• Call of Duty</li>
+        <li>• Rocket League</li>
+        <li>• Fortnite</li>
+        <li>• Assetto Corsa</li>
+        <li>• GTA V</li>
+    </ul>
+
+    <a class="btn" href="#">Contattami</a>
+    <a class="btn" href="#">Download Template</a>
+
+</div>
+
+</body>
+</html>
