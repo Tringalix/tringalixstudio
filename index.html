@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>TringaliXStudio – Template Neon & Web Design</title>
+    <meta name="description" content="TringaliXStudio: template HTML/CSS neon, layout moderni, pagine portfolio e design per creator e gamer.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --bg: #050509;
+            --card: #101018;
+            --accent: #00ffc8;
+            --accent-soft: #00bfa0;
+            --text: #f5f5f5;
+            --muted: #aaaaaa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle at top, #111428 0, #050509 45%, #020208 100%);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* PARTICELLE SFONDO */
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); opacity: 0.9; }
+            100% { transform: translateY(-120vh) translateX(20px); opacity: 0; }
+        }
+
+        .particle {
+            position: fixed;
+            bottom: -50px;
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            opacity: 0.7;
+            filter: blur(0.5px);
+            animation: float linear infinite;
+            z-index: 1;
+        }
+
+        /* LAYOUT BASE */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(5, 5, 9, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 255, 200, 0.2);
+        }
+
+        .nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: var(--accent);
+            text-shadow: 0 0 8px rgba(0, 255, 200, 0.7);
+        }
+
+        .logo span {
+            color: #ffffff;
+            font-weight: normal;
+        }
+
+        .nav-links a {
+            margin-left: 18px;
+            text-decoration: none;
+            color: var(--muted);
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+            position: relative;
+            z-index: 5;
+        }
+
+        /* HERO */
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .hero-title {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .hero-title span {
+            color: var(--accent);
+            text-shadow: 0 0 10px rgba(0, 255, 200, 0.7);
+        }
+
+        .hero-sub {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            border-radius: 999px;
+            border: 1px solid rgba(0, 255, 200, 0.4);
+            padding: 5px 10px;
+            font-size: 11px;
+            color: var(--accent);
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .btn-primary, .btn-ghost {
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+            font-weight: bold;
+            box-shadow: 0 0 12px rgba(0, 255, 200, 0.7);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-soft);
+            box-shadow: 0 0 18px rgba(0, 255, 200, 0.9);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid rgba(0, 255, 200, 0.4);
+        }
+
+        .btn-ghost:hover {
+            background: rgba(0, 255, 200, 0.08);
+        }
+
+        .hero-card {
+            background: radial-gradient(circle at top, #1b1b2f 0, #101018 40%, #050509 100%);
+            border-radius: 18px;
+            padding: 18px;
+            border: 1px solid rgba(0, 255, 200, 0.25);
+            box-shadow: 0 0 18px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-card-title {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+
+        .hero-card-main {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .hero-card-main span {
+            color: var(--accent);
+        }
+
+        .hero-card-list {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .hero-tag {
+            font-size: 11px;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* SEZIONI */
+        section {
+            margin-bottom: 45px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .section-sub {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        /* TEMPLATE GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 14px;
+            padding: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            border-color: rgba(0, 255, 200, 0.6);
+            box-shadow: 0 0 16px rgba(0, 255, 200, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .card-label {
+            font-size: 11px;
+            color: var(--accent);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-title {
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        .card-text {
+            font-size: 12px;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+
+        .card-meta {
+            font-size: 11px;
+            color: var(--muted);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* SERVIZI */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+
+        .service-title {
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .service-price {
+            font-size: 13px;
+            color: var(--accent);
+            margin-bottom: 6px;
+        }
+
+        /* CONTATTI */
+        .contact-box {
+            background: var(--card);
+            border-radius: 14px;
+            padding: 16px;
+            border: 1px solid rgba(0, 255, 200, 0.3);
+            max-width: 500px;
+        }
+
+        .contact-line {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+
+        .contact-highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 14px 20px 20px;
+            font-size: 11px;
+            color: var(--muted);
+            text-align: center;
+            background: rgba(5, 5, 9, 0.95);
+        }
+
+        @media (max-width: 800px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<script>
+// particelle sfondo
+for (let i = 0; i < 40; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + 'vw';
+    p.style.animationDuration = (8 + Math.random() * 10) + 's';
+    p.style.animationDelay = (Math.random() * 8) + 's';
+    p.style.width = p.style.height = (4 + Math.random() * 8) + 'px';
+    document.body.appendChild(p);
+}
+</script>
+
+<header>
+    <div class="nav">
+        <div class="logo">TringaliX<span>Studio</span></div>
+        <div class="nav-links">
+            <a href="#template">Template</a>
+            <a href="#servizi">Servizi</a>
+            <a href="#chi-sono">Chi sono</a>
+            <a href="#contatti">Contatti</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- HERO -->
+    <section class="hero">
+        <div>
+            <h1 class="hero-title">
+                Template <span>neon</span> e layout moderni<br>per creator, gamer e progetti web.
+            </h1>
+            <p class="hero-sub">
+                TringaliXStudio è il tuo spazio creativo: pagine HTML/CSS pronte all’uso, effetti neon,
+                layout responsive e design pensati per chi vuole qualcosa di diverso dal solito.
+            </p>
+
+            <div class="hero-badges">
+                <div class="badge">HTML / CSS puro</div>
+                <div class="badge">Stile neon & dark</div>
+                <div class="badge">Perfetto per portfolio, link-in-bio, gaming</div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#template" class="btn-primary">Guarda i template</a>
+                <a href="#servizi" class="btn-ghost">Richiedi un design su misura</a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <div class="hero-card-title">Pacchetto iniziale</div>
+            <div class="hero-card-main">
+                <span>Starter Pack Neon</span><br>
+                3 template pronti + 1 pagina personalizzata.
+            </div>
+            <div class="hero-card-list">
+                • Homepage neon<br>
+                • Pagina “link in bio”<br>
+                • Layout portfolio semplice<br>
+                • Personalizzazione colori e testi
+            </div>
+            <div class="hero-tag">TringaliXStudio · Web Design & Template</div>
+        </div>
+    </section>
+
+    <!-- TEMPLATE -->
+    <section id="template">
+        <h2 class="section-title">Template disponibili</h2>
+        <p class="section-sub">
+            Una selezione di template HTML/CSS pronti da usare. Ideali per creator, gamer, portfolio e pagine personali.
+            Puoi usarli come base per i tuoi progetti o richiedere modifiche su misura.
+        </p>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-label">Template · Neon</div>
+                <div class="card-title">Neon Landing Page</div>
+                <div class="card-text">
+                    Una homepage in stile neon con sfondo animato, call-to-action e sezione “Chi sono”.
+                    Perfetta per presentare un progetto o un profilo personale.
+                </div>
+                <div class="card-meta">
+                    <span>HTML + CSS</span>
+                    <span>Livello: Facile</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-label">Template · Creator</div>
+                <div class="card-title">Link-in-Bio Dark</div>
+                <div class="card-text">
+                    Una pagina verticale con pulsanti social, stile dark/neon, ideale per TikTok, Instagram e Twitch.
+                </div>
+                <div class="card-meta">
+                    <span>Mobile first</span>
+                    <span>Social ready</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-label">Template · Gaming</div>
+                <div class="card-title">Gaming Profile</div>
+                <div class="card-text">
+                    Layout pensato per gamer: nickname, giochi preferiti, link a Discord, Twitch e YouTube.
+                </div>
+                <div class="card-meta">
+                    <span>Stile arcade</span>
+                    <span>Custom colori</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-label">Template · Portfolio</div>
+                <div class="card-title">Portfolio Minimal Neon</div>
+                <div class="card-text">
+                    Una pagina semplice per mostrare progetti, immagini e link. Pulita, leggibile, con tocchi neon.
+                </div>
+                <div class="card-meta">
+                    <span>Per creativi</span>
+                    <span>1 pagina</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIZI -->
+    <section id="servizi">
+        <h2 class="section-title">Servizi su misura</h2>
+        <p class="section-sub">
+            Oltre ai template pronti, TringaliXStudio può creare layout personalizzati per i tuoi progetti:
+            pagine per creator, gamer, portfolio, landing page e molto altro.
+        </p>
+
+        <div class="services">
+            <div class="card">
+                <div class="card-label">Servizio</div>
+                <div class="service-title">Pagina personale / Portfolio</div>
+                <div class="service-price">Da 15€ · HTML/CSS</div>
+                <div class="card-text">
+                    Una pagina unica per presentarti: nome, bio, progetti, link social. Stile neon o minimal,
+                    a seconda di quello che preferisci.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-label">Servizio</div>
+                <div class="service-title">Pagina link-in-bio per social</div>
+                <div class="service-price">Da 10€ · Mobile first</div>
+                <div class="card-text">
+                    Una pagina ottimizzata per smartphone con tutti i tuoi link: TikTok, Instagram, Twitch, YouTube,
+                    Discord e altro.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-label">Servizio</div>
+                <div class="service-title">Layout gaming / community</div>
+                <div class="service-price">Da 20€ · Stile arcade</div>
+                <div class="card-text">
+                    Layout pensati per community di gaming, server Discord, clan, team e progetti legati ai videogiochi.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHI SONO -->
+    <section id="chi-sono">
+        <h2 class="section-title">Chi c’è dietro TringaliXStudio</h2>
+        <p class="section-sub">
+            TringaliXStudio è un progetto personale dedicato al web design semplice, veloce e d’impatto.
+        </p>
+
+        <div class="card">
+            <div class="card-title">Un approccio pratico e diretto</div>
+            <div class="card-text">
+                L’obiettivo è creare pagine leggere, veloci e facili da modificare: niente framework pesanti,
+                solo HTML e CSS pulito, con un tocco di animazioni e stile neon quando serve.
+                Ideale per chi vuole qualcosa di bello senza complicarsi la vita.
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="contatti">
+        <h2 class="section-title">Contatti</h2>
+        <p class="section-sub">
+            Vuoi un template personalizzato, un layout su misura o un piccolo sito statico?
+            Puoi scrivere un messaggio con la tua idea e ricevere una proposta semplice e chiara.
+        </p>
+
+        <div class="contact-box">
+            <p class="contact-line">
+                Puoi contattarmi via <span class="contact-highlight">email</span> o <span class="contact-highlight">social</span>
+                (da aggiungere qui quando li decidi).
+            </p>
+            <p class="contact-line">
+                Esempio email: <span class="contact-highlight">tringalixstudio@esempio.com</span>
+            </p>
+            <p class="contact-line">
+                Nel messaggio indica:
+            </p>
+            <p class="contact-line">
+                • che tipo di pagina vuoi (portfolio, link-in-bio, gaming, altro)<br>
+                • se hai già colori o stile in mente<br>
+                • se ti serve solo il codice o anche l’hosting
+            </p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    TringaliXStudio · Template & Web Design · HTML/CSS · Stile neon e layout moderni
+</footer>
+
+</body>
+</html>
