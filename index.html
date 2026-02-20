@@ -20,4 +20,179 @@
         body {
             background: radial-gradient(circle at top, #111428 0, #050509 45%, #020208 100%);
             font-family: Arial, sans-serif;
-            color: var(--text
+            color: var(--text);
+            padding-bottom: 40px;
+        }
+
+        .neon-logo {
+            font-size: 42px;
+            font-weight: bold;
+            color: var(--accent);
+            text-shadow:
+                0 0 5px var(--accent),
+                0 0 10px var(--accent),
+                0 0 20px var(--accent),
+                0 0 40px var(--accent-soft);
+            letter-spacing: 2px;
+        }
+
+        .neon-logo span {
+            color: #fff;
+            font-weight: normal;
+            text-shadow:
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px var(--accent);
+        }
+
+        header {
+            background: rgba(5,5,9,0.9);
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(0,255,200,0.3);
+            text-align: center;
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+        }
+
+        main { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        .section-sub {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 18px;
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 0 12px rgba(0,0,0,0.7);
+        }
+
+        .card-title { font-size: 18px; margin-bottom: 6px; }
+        .card-text { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            background: var(--accent);
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 8px;
+        }
+
+        .btn:hover { background: var(--accent-soft); }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1 class="neon-logo">TringaliX<span>Studio</span></h1>
+</header>
+
+<main>
+
+    <h2 class="section-title">Template pronti all'uso</h2>
+    <p class="section-sub">Clicca per aprire i template già compilati.</p>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="card-title">Gaming Profile</div>
+            <div class="card-text">Profilo gaming neon con avatar, bio e social.</div>
+            <a class="btn" href="gaming-profile.html">Apri Template</a>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Link‑in‑Bio Dark</div>
+            <div class="card-text">Pagina verticale neon per TikTok, Instagram e Twitch.</div>
+            <a class="btn" href="link-in-bio.html">Apri Template</a>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Portfolio Neon</div>
+            <div class="card-text">Portfolio moderno con sezioni progetti e contatti.</div>
+            <a class="btn" href="portfolio-neon.html">Apri Template</a>
+        </div>
+
+    </div>
+
+    <section style="margin-top:40px;">
+        <h2 class="section-title">Pack Grafico Neon</h2>
+        <p class="section-sub">Banner, card social, overlay e loghi neon.</p>
+
+        <div class="grid">
+
+            <div class="card">
+                <div class="card-title">Neon Social Pack</div>
+                <div class="card-text">
+                    Pack completo per creator e streamer: banner, card social, overlay e loghi neon.
+                </div>
+                <div class="card-text" style="color:var(--accent); font-weight:bold;">Prezzo: 10€</div>
+
+                <a class="btn" href="pack-grafico.html">Vedi il Pack</a>
+
+                <a class="btn" href="https://checkout.revolut.com/pay/d36e5488-7d94-4afd-8bb0-94307aefc2c2" target="_blank">
+                    Acquista ora
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section style="margin-top:40px;">
+        <h2 class="section-title">Contatti</h2>
+        <p class="section-sub">Per acquisti, collaborazioni o richieste personalizzate.</p>
+
+        <div class="card">
+
+            <p style="margin-bottom:15px;">
+                <strong style="color:var(--accent);">Email:</strong><br>
+                <span style="color:var(--text);">tringalidavide362@gmail.com</span>
+            </p>
+
+            <p style="margin-bottom:15px;">
+                <strong style="color:var(--accent);">Instagram:</strong><br>
+                <a href="https://instagram.com/tringali_davide" target="_blank" style="color:var(--accent); text-decoration:none;">
+                    @tringali_davide
+                </a>
+            </p>
+
+            <a class="btn" href="mailto:tringalidavide362@gmail.com">Contattami via Email</a>
+            <a class="btn" href="https://instagram.com/tringali_davide" target="_blank">Scrivimi su Instagram</a>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    TringaliXStudio · Template & Pack Grafici Neon
+</footer>
+
+</body>
+</html>
