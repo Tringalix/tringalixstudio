@@ -4,54 +4,104 @@
 <meta charset="UTF-8">
 <title>Link‑in‑Bio Dark – TringaliXStudio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-    body {
-        background: #050509;
-        font-family: Arial;
-        color: white;
-        text-align: center;
-        padding: 30px;
+    :root {
+        --accent: #00ffc8;
+        --accent-soft: #00bfa0;
+        --bg: #050509;
+        --card: #101018;
+        --text: #ffffff;
+        --muted: #aaaaaa;
     }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: radial-gradient(circle at top, #111428 0, #050509 45%, #020208 100%);
+        font-family: Arial, sans-serif;
+        color: var(--text);
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 420px;
+        margin: 0 auto;
+        background: var(--card);
+        padding: 25px;
+        border-radius: 18px;
+        border: 1px solid rgba(0,255,200,0.3);
+        box-shadow: 0 0 18px rgba(0,0,0,0.7);
+    }
+
     .avatar {
         width: 120px;
         height: 120px;
         border-radius: 50%;
-        border: 3px solid #00ffc8;
+        border: 3px solid var(--accent);
+        object-fit: cover;
         margin-bottom: 15px;
     }
+
     .name {
-        font-size: 26px;
-        color: #00ffc8;
-        margin-bottom: 10px;
+        font-size: 28px;
+        font-weight: bold;
+        color: var(--accent);
+        text-shadow: 0 0 10px rgba(0,255,200,0.7);
+        margin-bottom: 8px;
     }
+
     .bio {
-        color: #aaa;
+        color: var(--muted);
+        font-size: 14px;
         margin-bottom: 20px;
     }
+
     .link {
         display: block;
-        background: #00ffc8;
+        background: var(--accent);
         color: #000;
-        padding: 12px;
+        padding: 14px;
         margin: 10px auto;
-        width: 80%;
-        border-radius: 10px;
+        width: 100%;
+        border-radius: 12px;
         font-weight: bold;
         text-decoration: none;
+        font-size: 15px;
+        transition: 0.2s;
+    }
+
+    .link:hover {
+        background: var(--accent-soft);
     }
 </style>
 </head>
 
 <body>
 
-<img class="avatar" src="https://i.imgur.com/4ZQZ4ZC.png">
-<div class="name">TringaliX</div>
-<div class="bio">Creator · Gaming · Neon Style</div>
+<div class="container">
 
-<a class="link" href="#">TikTok</a>
-<a class="link" href="#">Instagram</a>
-<a class="link" href="#">YouTube</a>
-<a class="link" href="#">Discord</a>
+    <img class="avatar" src="https://i.imgur.com/4ZQZ4ZC.png" alt="Avatar">
+
+    <div class="name">TringaliX</div>
+
+    <div class="bio">
+        Creator · Gaming · Neon Style  
+        Link ufficiali e social.
+    </div>
+
+    <a class="link" href="#">TikTok</a>
+    <a class="link" href="#">Instagram</a>
+    <a class="link" href="#">YouTube</a>
+    <a class="link" href="#">Discord</a>
+    <a class="link" href="#">Contattami</a>
+
+</div>
 
 </body>
 </html>
